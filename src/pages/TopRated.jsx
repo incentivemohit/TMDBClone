@@ -1,0 +1,22 @@
+import React,{useState} from "react";
+import MoviePage from "../components/details/MoviePage/MoviePage";
+import { Box } from "@mui/material";
+import Heading from "../components/details/MoviePage/Heading";
+import CarouselDataFetching from "../components/utility/CarouselDataFetching";
+
+function TopRated() {
+  const [dataList,setDataList ] = useState([])
+
+  CarouselDataFetching("movie/top_rated",setDataList);
+
+  return (
+    <Box className=" pt-20 flex flex-col ">
+      <Box className="pl-12 pt-2 pb-5">
+        <Heading heading="Top Rated" />
+      </Box>
+      <MoviePage dataList={dataList} />
+    </Box>
+  );
+}
+
+export default TopRated;
