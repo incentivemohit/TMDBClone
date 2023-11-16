@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Stack from "@mui/material/Stack";
 import SearchIcon from "@mui/icons-material/Search";
 import {
@@ -15,12 +15,15 @@ import {
 import AddIcon from "@mui/icons-material/Add";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Link } from "react-router-dom";
+import { Context } from "../../Context";
 
 function Navbar() {
+  const { emptySearch } = useContext(Context);
+
   return (
     <AppBar position="fixed" sx={{ backgroundColor: "#032541" }}>
       <Toolbar>
-        <Link to={"/"} className="pl-5">
+        <Link to={"/"} className="pl-5" onClick={emptySearch}>
           <img
             style={{ cursor: "pointer" }}
             src="/assets/images/tmdb1.png"

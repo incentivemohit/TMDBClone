@@ -9,7 +9,7 @@ export default function Tabs({ data, bgColor, textColor, setDataList }) {
     setIndex(id);
     await axios
       .get(
-        `https://api.themoviedb.org/3/${url}?api_key=6a9584b21035e45dc92a6d0bfd73eab4`
+        `https://api.themoviedb.org/3/${url}?api_key=${process.env.REACT_API_KEY}`
       )
       .then((res) => {
         setDataList(res.data.results);

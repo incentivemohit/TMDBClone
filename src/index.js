@@ -5,11 +5,14 @@ import reportWebVitals from "./reportWebVitals";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 import "./index.css";
+import ContextProvider from "./Context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <ThemeProvider theme={theme}>
-    <App />
+    <ContextProvider>
+      <App />
+    </ContextProvider>
   </ThemeProvider>
 );
 

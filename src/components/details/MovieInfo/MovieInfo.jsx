@@ -25,7 +25,7 @@ function MovieInfo() {
   const getMovie = async () => {
     await axios
       .get(
-        `https://api.themoviedb.org/3/${type}/${id}?api_key=${process.env.REACT_API_KEY}`
+        `https://api.themoviedb.org/3/${type}/${id}?api_key=${process.env.REACT_APP_API_KEY}`
       )
       .then((res) => {
         console.log(res.data)

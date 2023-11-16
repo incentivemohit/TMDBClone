@@ -1,5 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import React from "react";
+import Search from "../Search/Search";
 
 function Banner() {
   return (
@@ -22,7 +23,7 @@ function Banner() {
         }}
       >
         <Box className="pl-3">
-          <Typography color="white" variant="h3"  fontWeight={'bold'}>
+          <Typography color="white" variant="h3" fontWeight={"bold"}>
             Welcome.
           </Typography>
           <Typography color="white" fontSize={23} fontWeight={"bold"}>
@@ -30,37 +31,7 @@ function Banner() {
           </Typography>
         </Box>
 
-        <Stack
-          direction={"row"}
-          className="rounded-l-2xl rounded-r-3xl pl-3"
-          sx={{
-            backgroundColor: "white",
-            width: "98%",height:"42px"
-          }}
-        >
-          <input
-            type="search"
-            placeholder="Search for a movie,tv,show,person....."
-            style={{
-              width: "100%",
-              border: "none",
-              fontSize: "18px",
-              paddingLeft: "10px",
-              outline: "none",
-            }}
-          />
-
-          <Box
-            className="w-24 flex justify-center items-center bg-gradient-to-r from-green-400 to-blue-400 h-full"
-            sx={{
-              borderRadius: "20px",height:"42px"
-            }}
-          >
-            <Typography fontSize={15} fontWeight={"bold"} color={"white"}>
-              Search
-            </Typography>
-          </Box>
-        </Stack>
+        <Search />
       </Stack>
     </div>
   );
